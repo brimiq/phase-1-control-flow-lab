@@ -1,27 +1,41 @@
-
-function scuberGreetingForFeet(){
-  let rideLength = 0
-  let sample = 0
-  if(rideLength<=400){
-    console.log(`Sample${sample}`)
-    sample = sample + 1
-    console.log("This one is on me")
+function scuberGreetingForFeet(rideLength) {
+  let result = false;
+  if (rideLength < 400) {
+    result = "This one is on me";
+  } else if (rideLength >= 400 && rideLength <= 2000) {
+    console.log("That will be twenty bucks");
+  } else if (rideLength >= 2000 && rideLength <= 2500) {
+    console.log("I will gladly take your 30 bucks");
+  } else if (rideLength > 2500) {
+    console.log("No can do");
   }
-  scuberGreetingForFeet(1500)="That will be 20 bucks."
-  if(rideLength >=400 && rideLength<=2000){
-    console.log("Your total is 20 dollars")
-  }
-  scuberGreetingForFeet(2001)="I will gladly take your 30 dollars"
-  if(rideLength>=2000 && rideLength<=2500){
-    console.log("Your total is 30 dollars")
-  }
-  scuberGreetingForFeet(2500)="No rides above 2500!"
+  return result;
 }
 
-function ternaryCheckCity(){
-  // Write your code here!
+function ternaryCheckCity(cityName) {
+  const rightCity = (cityName = 'NYC')? true : false
+  if(rightCity=true){
+    console.log("Ok sounds good")
+  }
+  const wrongCity = (cityName="Pittsburg")? true:false
+  if(wrongCity=true){
+    console.log("No can do.")
+  }
+
 }
 
-function switchOnCharmFromTip(){
-  // Write your code here!
+function switchOnCharmFromTip(tipClass) {
+  let tipValue
+  let tipClass
+  if(tipValue>=20 && tipValue<=100){
+    tipClass = 'generous'
+    console.log("Thank you so much")
+    
+  }else if(tipValue>=10 && tipValue<=20){
+    tipClass = 'not as generous'
+    console.log("Thank you.")
+  }else if(tipValue>=0 && tipValue<=10){
+    tipClass = 'thanks for everything'
+    console.log("Bye")
+  }
 }
